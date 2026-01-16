@@ -25,7 +25,6 @@ k\in\{1,\dots,H\}
 \right\}.
 $$
 
-
 ($x_{j,k}$ and $u_{j,k}$ denote the state and control input at the $k$th sampling time of the $j$th trajectory). 
 Moreover, condensing a Koopman-MPC problem into a QP ultimately requires the multi-step state-control mapping: $$(x_{1},\cdots,x_{H})=\mathbf{E}\phi(x(t))+\mathbf{F}(u_0,\cdots,u_{H-1})$$
 which is obtained by recursively propagating the lifted linear dynamics defined by $\{A,B,C\}$ over the horizon $H$, where the matrices $\{\mathbf{E},\mathbf{F}\}$ are constructed from $\{A,B,C\}$ accordingly.  
