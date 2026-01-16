@@ -36,10 +36,9 @@ $$
 
 where $X_j = \mathrm{vec}[x_{j,1},x_{j,2}, \cdots{}, x_{j,H}]$ and $U_j = \mathrm{vec}[u_{j,0},u_{j,1},\cdots{}, u_{j,H-1}]$ are trajectory samples from the data set $\mathcal{D}$. This reformulated problem is now a least-squares optimization that is convex and further parallelizable.  
 
-### (2)
 We show that the proposed multi-step EDMD identification problem can be decomposed at a prediction horizon level and state coordinates level, enabling parallelized identification of $\{\mathbf{E},\mathbf{F}\}$ and facilitating the incorporation of row-wise $\ell_1$ regularization on $\mathbf{E}$ for dictionary pruning. Dictionary pruning mitigates the difficulty of dictionary selection by automatically removing functions that are irrelevant to the system dynamics. Consequently, we obtain a least-squares-based multi-step EDMD algorithm with parallelization and integrated dictionary pruning.
 
-### (3)
+### (2)
 Furthermore, we provide a non-asymptotic analysis of both one-step and multi-step EDMD under finite data regimes. For one-step EDMD, we show that model errors compound through repeated composition, potentially leading to error growth that is exponential in the prediction horizon. In contrast, the proposed multi-step EDMD yields error bounds that depend only on the target multi-step mapping, rather than on the accuracy of intermediate EDMD approximations. This distinction provides a principled explanation for the improved long-horizon prediction performance observed with the proposed multi-step EDMD approach.
 
 
