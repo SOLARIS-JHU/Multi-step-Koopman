@@ -37,6 +37,7 @@ $$
 where $X_j = \mathrm{vec}[x_{j,1},x_{j,2}, \cdots{}, x_{j,H}]$ and $U_j = \mathrm{vec}[u_{j,0},u_{j,1},\cdots{}, u_{j,H-1}]$ are trajectory samples from the data set $\mathcal{D}$. This reformulated problem is now a least-squares optimization that is convex and further parallelizable.  
 
 We show that the proposed multi-step EDMD identification problem can be decomposed at a prediction horizon level and state coordinates level, enabling parallelized identification of $\{\mathbf{E},\mathbf{F}\}$ and facilitating the incorporation of row-wise $\ell_1$ regularization on $\mathbf{E}$ for dictionary pruning. Dictionary pruning mitigates the difficulty of dictionary selection by automatically removing functions that are irrelevant to the system dynamics. Consequently, we obtain a least-squares-based multi-step EDMD algorithm with parallelization and integrated dictionary pruning.
+
 <img width="432" height="663" alt="image" src="https://github.com/user-attachments/assets/3e4201fd-6a30-419f-bb47-6539ac20e961" />
 
 
