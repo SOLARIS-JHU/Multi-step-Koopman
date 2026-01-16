@@ -18,7 +18,7 @@ $$
 where $H$ is the prediction horizon and $M_m$ is the number of sampled trajectories:
 
 $$
-\mathcal{D}= \left\{(x_{j,k},x_{j,0},u_{j,k-1}) \right\},~\forall j\in[1, M_m],~\forall k \in [1, H]
+\mathcal{D}= \left\{(x_{j,k},x_{j,0},u_{j,k-1}) \right\}
 $$
 
 ($x_{j,k}$ and $u_{j,k}$ denote the state and control input at the $k$th sampling time of the $j$th trajectory). 
