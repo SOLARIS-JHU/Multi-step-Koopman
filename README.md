@@ -9,8 +9,7 @@ Extended Dynamic Mode Decomposition (EDMD), a representative Koopman approach, f
 Extending existing EDMD approaches to a multi-step prediction minimization setting necessitates terms of the form $\{A^k,\cdots,A\}$, which breaks the convexity of the original least-squares problem and results in a nonconvex optimization formulation; For example,
 
 $$
-\min_{A,B}\sum_{j=1}^{M_m}\sum_{k=1}^{H}
-\left\|\psi(x_{j,k})-A^k\psi(x_{j,0})-\sum_{m=0}^{k-1} A^{k-1-m}Bu_{j,m} \right\|_2^2 .
+\min_{A,B}\sum_{j=1}^{M_m}\sum_{k=1}^{H}\left\|\psi(x_{j,k})-A^k\psi(x_{j,0})-\sum_{m=0}^{k-1} A^{k-1-m}Bu_{j,m} \right\|_2^2
 $$
 
 where $H$ is the prediction horizon and $M_m$ is the number of sampled trajectories:
