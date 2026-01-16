@@ -11,9 +11,9 @@ Extending existing EDMD approaches to a multi-step prediction minimization setti
 $$
 \min_{A,B}\sum_{j=1}^{M_m}\sum_{k=1}^{H}
 \left\Vert
-\psi(x_{j,k}) - A^k \psi(x_{j,0})
-- \sum_{m=0}^{k-1} A^{k-1-m} B u_{j,m}
-\right\Vert_2^2.
+\psi(x_{j,k})-A^k\psi(x_{j,0})
+-\sum_{m=0}^{k-1}A^{k-1-m}Bu_{j,m}
+\right\Vert_2^2
 $$
 
 where $H$ is the prediction horizon and $M_m$ is the number of sampled trajectories:
