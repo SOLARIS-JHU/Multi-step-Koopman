@@ -9,7 +9,7 @@ Extended Dynamic Mode Decomposition (EDMD), a representative Koopman approach, f
 Extending existing EDMD approaches to a multi-step prediction minimization setting necessitates terms of the form $\{A^k,\cdots,A\}$, which breaks the convexity of the original least-squares problem and results in a nonconvex optimization formulation; Moreover, condensing a Koopman-MPC problem into a QP ultimately requires the multi-step state-control mapping: $$(x_{1},\cdots,x_{H})=\mathbf{E}\phi(x(t))+\mathbf{F}(u_0,\cdots,u_{H-1})$$
 which is obtained by recursively propagating the lifted linear dynamics defined by $\{A,B,C\}$ over the horizon $H$, where the matrices $\{\mathbf{E},\mathbf{F}\}$ are constructed from $\{A,B,C\}$ accordingly.  
 
-## Methods: ($\ell_1$-regularized) least-square multi-step EDMD
+## Method: ($\ell_1$-regularized) least-square multi-step EDMD
 
 Motivated by this observation, this paper proposes a multi-step EDMD algorithm that directly learns the matrices $\{\mathbf{E},\mathbf{F}\}$ governing the multi-step state-control mapping, thereby bypassing the identification of $\{A,B,C\}$ and the subsequent construction of $\{\mathbf{E},\mathbf{F}\}$ used in conventional Koopman-MPC approaches. As a result, our algorithm admits a convex least-squares formulation.
 
