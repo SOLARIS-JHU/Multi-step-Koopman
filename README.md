@@ -15,9 +15,16 @@ $$
 where $H$ is the prediction horizon and $M_m$ is the number of sampled trajectories:
 
 $$
-\mathcal{D}=\left\{(x_{j,0},x_{j,k},u_{j,0:k-1}) \;:\;
-j\in\{1,\dots,M_m\},\ k\in\{1,\dots,H\}\right\}.
+\mathcal{D}
+=
+\left\{
+(x_{j,0},x_{j,k},u_{j,0:k-1})
+\;:\;
+j\in\{1,\dots,M_m\},\;
+k\in\{1,\dots,H\}
+\right\}.
 $$
+
 
 ($x_{j,k}$ and $u_{j,k}$ denote the state and control input at the $k$th sampling time of the $j$th trajectory). 
 Moreover, condensing a Koopman-MPC problem into a QP ultimately requires the multi-step state-control mapping: $$(x_{1},\cdots,x_{H})=\mathbf{E}\phi(x(t))+\mathbf{F}(u_0,\cdots,u_{H-1})$$
