@@ -9,8 +9,12 @@ Extended Dynamic Mode Decomposition (EDMD), a representative Koopman approach, f
 Extending existing EDMD approaches to a multi-step prediction minimization setting necessitates terms of the form $\{A^k,\cdots,A\}$, which breaks the convexity of the original least-squares problem and results in a nonconvex optimization formulation; Moreover, condensing a Koopman-MPC problem into a QP ultimately requires the multi-step state-control mapping: $$(x_{1},\cdots,x_{H})=\mathbf{E}\phi(x(t))+\mathbf{F}(u_0,\cdots,u_{H-1})$$
 which is obtained by recursively propagating the lifted linear dynamics defined by $\{A,B,C\}$ over the horizon $H$, where the matrices $\{\mathbf{E},\mathbf{F}\}$ are constructed from $\{A,B,C\}$ accordingly.  
 
-## Methods: ($\ell_1$)-regularized least-square multi-step EDMD
+## Methods: ($\ell_1$-regularized) least-square multi-step EDMD
 
 Motivated by this observation, this paper proposes a multi-step EDMD algorithm that directly learns the matrices $\{\mathbf{E},\mathbf{F}\}$ governing the multi-step state-control mapping, thereby bypassing the identification of $\{A,B,C\}$ and the subsequent construction of $\{\mathbf{E},\mathbf{F}\}$ used in conventional Koopman-MPC approaches. As a result, our algorithm admits a convex least-squares formulation.
+
+We show that the proposed multi-step EDMD identification problem can be decomposed at a prediction horizon level and state coordinates level, enabling parallelized identification of $\{\mathbf{E},\mathbf{F}\}$ and facilitating the incorporation of row-wise $\ell_1$ regularization on $\mathbf{E}$ for dictionary pruning. Dictionary pruning mitigates the difficulty of dictionary selection by automatically removing functions that are irrelevant to the system dynamics. Consequently, we obtain a least-squares-based multi-step EDMD algorithm with parallelization and integrated dictionary pruning.
+
+Furthermore, we provide a non-asymptotic analysis of both one-step and multi-step EDMD under finite data regimes. For one-step EDMD, we show that model errors compound through repeated composition, potentially leading to error growth that is exponential in the prediction horizon. In contrast, the proposed multi-step EDMD yields error bounds that depend only on the target multi-step mapping, rather than on the accuracy of intermediate EDMD approximations. This distinction provides a principled explanation for the improved long-horizon prediction performance observed with the proposed multi-step EDMD approach.
 
 
