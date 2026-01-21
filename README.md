@@ -1,5 +1,5 @@
 # Multi-step-Koopman
-[![arXiv](https://img.shields.io/badge/arXiv-2602.XXXXX-b31b1b.svg)](https://arxiv.org/abs/2601.11901)
+[![arXiv](https://img.shields.io/badge/arXiv-2601.11901-b31b1b.svg)](https://arxiv.org/abs/2601.11901)
 
 MPC is widely used in real-time applications, but practical implementations are typically restricted to convex QP formulations to ensure fast and certified execution.  A common workaround is to approximate nonlinear dynamics via online linearization, yielding a sequence of QPs. These methods are often referred to as model-based approximation approaches.
 
