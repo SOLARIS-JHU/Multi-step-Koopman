@@ -45,4 +45,19 @@ We show that the proposed multi-step EDMD identification problem can be decompos
 ### (2)
 Furthermore, we provide a non-asymptotic analysis of both one-step and multi-step EDMD under finite data regimes. For one-step EDMD, we show that model errors compound through repeated composition, potentially leading to error growth that is exponential in the prediction horizon. In contrast, the proposed multi-step EDMD yields error bounds that depend only on the target multi-step mapping, rather than on the accuracy of intermediate EDMD approximations. This distinction provides a principled explanation for the improved long-horizon prediction performance observed with the proposed multi-step EDMD approach.
 
+## Citation
 
+If you use πMPC in your research, please cite:
+
+```bibtex
+@inproceedings{wu2026multi-step-Koopman,
+      title={Least-Squares Multi-Step Koopman Operator Learning for Model Predictive Control},
+      author={Liang Wu, Wallace Gian Yion Tan, Leqi Zhou, Richard D. Braatz, and Jan Drgona},
+      year={2026},
+      eprint={2601.11901},
+      archivePrefix={arXiv},
+      url={https://arxiv.org/abs/2601.11901},
+      volume={},
+      number={},
+}
+```
